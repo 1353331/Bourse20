@@ -1,0 +1,26 @@
+﻿<Window x:Class="Bourses.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bourses"
+        mc:Ignorable="d"
+        Title="Bourse" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30">
+            </RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <ToolBarTray>
+            <ToolBar>
+                <Button Content="Proprio" Click="cmd_proprio"></Button>
+                <Button Content="Société" Click="cmd_societe" VerticalAlignment="Top"></Button>
+                <Button Content="Transaction" Click="cmd_transaction" VerticalAlignment="Top"></Button>
+                <Button Content="Quitter" Click="cmd_quitter"></Button>
+            </ToolBar>
+        </ToolBarTray>
+        <Image Source="/images/logoBourse.jpg" Grid.Row="1" Stretch="Fill" Name="img_logo"></Image>
+        <ContentPresenter Grid.Row="1" Name="presenteurContenu"></ContentPresenter>
+    </Grid>
+</Window>
